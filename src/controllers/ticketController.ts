@@ -20,7 +20,7 @@ export interface requestCustom {
 
 const ticketController = {
   count: async (req: Request, res: Response): Promise<void> => {
-    res.send("sent !");
+    res.send("sent");
   },
 };
 //
