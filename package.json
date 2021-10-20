@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node-dev --respawn src/server.ts",
+    "start": "ts-node-dev --respawn server.ts",
     "lint": "eslint . "
   },
   "author": "",

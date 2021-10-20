@@ -3,7 +3,7 @@ import cors from "cors";
 const asyncHandler = require("express-async-handler");
 require("dotenv").config();
 
-import ticketController from "./controllers/ticketController";
+import ticketController from "./src/controllers/ticketController";
 
 const app = express();
 
