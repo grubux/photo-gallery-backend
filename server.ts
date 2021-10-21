@@ -3,7 +3,7 @@ import cors from "cors";
 const asyncHandler = require("express-async-handler");
 require("dotenv").config();
 
-import ticketController from "./src/controllers/ticketController";
+import ticketController from "./src/controllers/controller";
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(cors());
 
 // Routes
 
-app.post("/api/v1/count", asyncHandler(ticketController.count));
+app.post("/api/v1", asyncHandler(ticketController.count));
 
 app.get("*", (_, res) => {
   res.status(404);
@@ -23,8 +23,6 @@ app.get("*", (_, res) => {
 app.use((error: any, req: Request, res: Response, next: NextFunction) => {
   console.log(error);
   if (error.name === "MongoServerError" && error.code === 11000) {
-    //   console.log("The name is already used");
-    //   res.send(400).json({ success: false, message: "The name is already used" });
   }
 });
 
