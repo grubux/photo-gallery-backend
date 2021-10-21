@@ -5,10 +5,10 @@ export interface IInterface {
   quantity: number;
 }
 
-const ticketController = {
+const controller = {
   count: async (req: Request, res: Response): Promise<void> => {
     res.send("sent");
   },
 };
 
-export default ticketController;
+export default controller;

@@ -3,7 +3,7 @@ import cors from "cors";
 const asyncHandler = require("express-async-handler");
 require("dotenv").config();
 
-import ticketController from "./src/controllers/controller";
+import controller from "./src/controllers/controller";
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(cors());
 
 // Routes
 
-app.post("/api/v1", asyncHandler(ticketController.count));
+app.post("/api/v1", asyncHandler(controller.count));
 
 app.get("*", (_, res) => {
   res.status(404);
